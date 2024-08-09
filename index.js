@@ -1,79 +1,21 @@
 //Logica de tarjetas
+const id1 = document.getElementById("item-1");
+const toggle = () => id1.classList.toggle("image-1");
 
-function doSomething() {
-  const item1 = document.getElementById("item-1");
+const id2 = document.getElementById("item-3");
+const toggle2 = () => id2.classList.toggle("image-2");
 
-  console.log(item1);
+function doSomething(id, toggle) {
+  console.log(id);
   const action = () => alert("Hello");
-  const toggle = () => item1.classList.toggle("image-1");
 
-  item1.addEventListener("click", toggle);
-  item1.removeEventListener("click", action);
+  id1.removeEventListener("click", action);
 }
 
-doSomething();
-
-function doSomething2() {
-  const item1 = document.getElementById("item-5");
-
-  console.log(item1);
-  const action = () => alert("Hello");
-  const toggle = () => item1.classList.toggle("image-1");
-
-  item1.addEventListener("click", toggle);
-  item1.removeEventListener("click", action);
+if (id1.addEventListener("click", toggle)) {
+  doSomething(id1, toggle);
 }
 
-doSomething2();
-
-function doSomething3() {
-  const item1 = document.getElementById("item-4");
-
-  console.log(item1);
-  const action = () => alert("Hello");
-  const toggle = () => item1.classList.toggle("image-2");
-
-  item1.addEventListener("click", toggle);
-  item1.removeEventListener("click", action);
+if (id2.addEventListener("click", toggle2)) {
+  doSomething(id2, toggle2);
 }
-
-doSomething3();
-
-function doSomething4() {
-  const item1 = document.getElementById("item-3");
-
-  console.log(item1);
-  const action = () => alert("Hello");
-  const toggle = () => item1.classList.toggle("image-2");
-
-  item1.addEventListener("click", toggle);
-  item1.removeEventListener("click", action);
-}
-
-doSomething4();
-
-function doSomething5() {
-  const item1 = document.getElementById("item-2");
-
-  console.log(item1);
-  const action = () => alert("Hello");
-  const toggle = () => item1.classList.toggle("image-3");
-
-  item1.addEventListener("click", toggle);
-  item1.removeEventListener("click", action);
-}
-
-doSomething5();
-
-function doSomething6() {
-  const item1 = document.getElementById("item-6");
-
-  console.log(item1);
-  const action = () => alert("Hello");
-  const toggle = () => item1.classList.toggle("image-3");
-
-  item1.addEventListener("click", toggle);
-  item1.removeEventListener("click", action);
-}
-
-doSomething6();
